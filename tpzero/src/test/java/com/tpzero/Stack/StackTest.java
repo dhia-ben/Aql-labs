@@ -1,5 +1,7 @@
 package com.tpzero.Stack;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,7 +21,7 @@ public class StackTest {
     }
 
     @Test
-    public void testPushWithExpendElement() {
+    public void testPushWithExpendElementIfStackIsFull() {
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -31,8 +33,7 @@ public class StackTest {
         stack.push(9);
         stack.push(10);
         stack.push(11);
-
         Assert.assertEquals(11, stack.size());
     }
-
 }
+
